@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.png">
+  <title>Nipo System</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <!--Css customizado-->
+  <!-- Custom CSS -->
+  <link href="../assets/libs/jquery-steps/jquery.steps.css" rel="stylesheet">
+  <link href="../assets/libs/jquery-steps/steps.css" rel="stylesheet">
+
+
+  <script src="https://kit.fontawesome.com/35874a87c5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="d-flex" id="content-wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="bg-dark border-right panel.collapse collapse">
+      <div class="logo">
+        <h4 class="font-weight-bold mb-0">Nipo Admin</h4>
+      </div>
+      <div class="menu list-group-flush">
+        <a href="../index.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+          <i class="fas fa-shapes lead mr-2"></i>Escritorio</a>
+        <a href="usuarios.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+          <i class="fas fa-users lead mr-2"></i>Usuarios</a>
+        <a href="productos.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+          <i class="fas fa-icons lead mr-2"></i>Productos</a>
+        <a href="eventos.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+          <i class="far fa-calendar-alt lead mr-2"></i>Eventos</a>
+        <a href="" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+          <i class="fas fa-satellite lead mr-2"></i>Contacto</a>    
+      </div>
+    </div>
+
+    <!--El menu del navegador-->
+    <div id="page-container" class="w-100 bg-imagen4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#sidebar-container" data-toggle="collapse"><i
+            class="fas fa-bars lead mr-2"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <form class="form-inline my-2 my-lg-0">
+          <div id="txtbusqueda" class="collapse">
+            <input class="form-control mr-sm-2" type="search" placeholder="Escribe &amp; enter" aria-label="Search">
+          </div>
+
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse"
+            data-target="#txtbusqueda" role="button">Buscar</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+
+
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <h4 class="font-weight-bold mb-0">Nipo Admin</h4><span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img src="../img/users/user4.jpg" alt="user" class="rounded-circle" width="31">
+                <span> Christian</span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right user-dd animated" id="menuUsuario"
+                aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Perfil</a>
+                <a class="dropdown-item" href="#">Eventos</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item badge-danger badge-pill d-flex" href="" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"><i class="fas fa-sms lead mr-2"></i>Mensajes <div
+                    class="ml-auto"><span class="badge badge-primary badge-pill">4</span></div></a>
+
+                <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown" aria-labelledby="2">
+                  <ul class="list-style-none p-2" style="list-style: none;">
+                    <li>
+                      <div class="">
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span class="btn btn-success btn-circle pl-2 pt-2"><i class="far fa-calendar-alt"
+                                style="font-size: 1.5rem;"></i></span>
+                            <div class="m-l-10 pl-2">
+                              <h5 class="m-b-0">Eventos hoy</h5>
+                              <span class="mail-desc">El sistema no registra eventos programados</span>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span class="btn btn-info btn-circle pl-2 pt-2"><i class="fas fa-parachute-box"
+                                style="font-size: 1.5rem;"></i></span>
+                            <div class="m-l-10 pl-2">
+                              <h5 class="m-b-0">Pedidos</h5>
+                              <span class="mail-desc">Se acerca un pedido 3 días</span>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span class="btn btn-warning btn-circle pl-2 pt-2"><i class="fas fa-chart-area"
+                                style="font-size: 1.5rem;"></i></span>
+                            <div class="m-l-10 pl-2">
+                              <h5 class="m-b-0">Invetario</h5>
+                              <span class="mail-desc">Productos con pocas unidades</span>
+                            </div>
+                          </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span class="btn btn-danger btn-circle pl-2 pt-2"><i class="fa fa-link"></i></span>
+                            <div class="m-l-10 pl-2">
+                              <h5 class="m-b-0">Admin NIPO</h5>
+                              <span class="mail-desc">Enlace Roto Seccion 1</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt lead mr-2"></i>Salir</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--Mensajes-->
+
+      <!--Contenido de la pagina-->
+      <div id="content" class="container-fluid p-5 ">
+
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <div class="card">
+              <div class="card-body wizard-content bg-light">
+                  <h4 class="card-title">Contactanos</h4>
+                  <h6 class="card-subtitle"></h6>
+                  <form id="example-form" action="#" class="m-t-40">
+                      <div>
+                          <h3>Cuenta</h3>
+                          <section>
+                              <label for="userName">Nombre Usuario <strong class="text-danger">*</strong></label>
+                              <input id="userName" name="userName" type="text" class="required form-control" placeholder="usuarioEjemplo">
+                              <label for="password">Password <strong class="text-danger">*</strong></label>
+                              <input id="password" name="password" type="text" class="required form-control">
+                              <label for="confirm">Confirm Password <strong class="text-danger">*</strong> </label>
+                              <input id="confirm" name="confirm" type="text" class="required form-control">
+                              <p><strong class="text-danger">(*)</strong> Obigatorio</p>
+                          </section>
+                          <h3>Perfil</h3>
+                          <section>
+                              <label for="name">Primer nombre <strong class="text-danger">*</strong></label>
+                              <input id="name" name="name" type="text" class="required form-control">
+                              <label for="surname">Segundo nombre <strong class="text-danger">*</strong></label>
+                              <input id="surname" name="surname" type="text" class="required form-control">
+                              <label for="email">Email <strong class="text-danger">*</strong></label>
+                              <input id="email" name="email" type="text" class="required email form-control">
+                              <label for="address">Direccion</label>
+                              <input id="address" name="address" type="text" class=" form-control">
+                              <p><strong class="text-danger">(*)</strong> Obligatorio</p>
+                          </section>
+                          <h3>Aclaraciones</h3>
+                          <section>
+                              <ul>
+                                  <li>Un encargado se comunicara</li>
+                                  <li>El timepo de respuesta maximo 4 horas</li>
+                                  <li>Gracias Por comunicarte</li>
+                              </ul>
+                          </section>
+                          <h3>Terminar</h3>
+                          <section>
+                              <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                              <label for="acceptTerms"><a href="politica.html" target="_blank" rel="noopener noreferrer">Estoy deacuerdo terminos y condiciones</a></label>
+                          </section>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Page wrapper  -->
+  <!-- ============================================================== -->
+
+
+
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body bg-dark">
+                <h5 class="card-title m-b-0 text-white">Tareas</h5>
+              </div>
+              <table class="table bg-light">
+                <thead>
+                  <tr>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Realizar pedido de repuestos</td>
+                    <td class="text-success">Realizado</td>
+                    <td>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-check-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Organizar bodega</td>
+                    <td class="text-warning">Pendiente</td>
+                    <td>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-check-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Reparación del extractor</td>
+                    <td class="text-danger">Cancelado</td>
+                    <td>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-check-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z" />
+                        </svg>
+                      </a>
+                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--Inicio de la seccion de progreso-->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body bg-dark text-white">
+                <h4 class="card-title">Progreso de la Empresa</h4>
+                <div class="m-t-20">
+                  <div class="d-flex no-block align-items-center">
+                    <span>81% Atención rapida</span>
+                    <div class="ml-auto">
+                      <span>15 minutos</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                      style="width: 81%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="m-t-25">
+                  <div class="d-flex no-block align-items-center m-t-15">
+                    <span>72% Ventas físicas</span>
+                    <div class="ml-auto">
+                      <span>120</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                      style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="m-t-25">
+                  <div class="d-flex no-block align-items-center m-t-15">
+                    <span>65% Ventas Online</span>
+                    <div class="ml-auto">
+                      <span>65</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+                      style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="m-t-25">
+                  <div class="d-flex no-block align-items-center m-t-15">
+                    <span>53% Fidelización</span>
+                    <div class="ml-auto">
+                      <span>600</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning  progress-bar-animated" role="progressbar"
+                      style="width: 53%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="m-t-25">
+                  <div class="d-flex no-block align-items-center m-t-15">
+                    <span>15% Respuesta Reparaciones</span>
+                    <div class="ml-auto">
+                      <span>4 horas</span>
+                    </div>
+                  </div>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar"
+                      style="width: 15%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div> <!--Fin del contenido de la pagina-->
+      
+    
+  </div>
+
+
+
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/jquery.ui.touch-punch-improved.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- this page js -->
+  <script src="../assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
+  <script src="../assets/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+  
+  
+  <script>
+    // Basic Example with form
+var form = $("#example-form");
+form.validate({
+    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    rules: {
+        confirm: {
+            equalTo: "#password"
+        }
+    }
+});
+ form.children("div").steps({
+    headerTag: "h3",
+    bodyTag: "section",
+    transitionEffect: "slideLeft",
+    onStepChanging: function(event, currentIndex, newIndex) {
+        form.validate().settings.ignore = ":disabled,:hidden";
+        return form.valid();
+    },
+    onFinishing: function(event, currentIndex) {
+        form.validate().settings.ignore = ":disabled";
+        return form.valid();
+    },
+    onFinished: function(event, currentIndex) {
+        alert("Submitted!");
+    }
+});
+
+
+</script>
+
+  
+
+
+
+</body>
+
+</html>

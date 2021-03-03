@@ -1,0 +1,596 @@
+/*------------------------------------------------*/
+/*-------------Fondos personalizados--------------*/
+.bg-cyan {
+    background-color: #4fc3f7 !important; }
+  
+  a.bg-cyan:hover, a.bg-cyan:focus,
+  button.bg-cyan:hover,
+  button.bg-cyan:focus {
+    background-color: #1eb2f5 !important; }
+
+.bg-black {
+    background-color: #000203 !important; }
+    
+  a.bg-cyan:hover, a.bg-cyan:focus,
+  button.bg-cyan:hover,
+  button.bg-cyan:focus {
+    background-color: #000203 !important; }
+
+
+#sidebar-container{
+    min-height: 100vh;
+    transition: all 0.05s ease-out 0s;;
+}
+
+#sidebar-container .logo{
+    padding: .8rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-container .menu{
+    width: 18rem;
+}
+
+#txtbusqueda{
+    transition: all 0.05s ease-out 0s;
+}
+
+#menuUsuario{
+    min-width: 220px;
+}
+
+.bg-imagen1{
+    background-image: url('../img/background/bikeIndex.jpg');
+    background-size: cover;
+    
+    
+}
+
+.bg-imagen2{
+    background-image: url('../img/background/bikeindex2.jpg');
+    background-size: cover;
+}
+
+.bg-imagen3{
+  background-image: url('../img/background/bikeindex1.jpg');
+  background-repeat: repeat;
+}  
+
+.bg-imagen4{
+  background-image: url('../img/background/bikeIndex3.jpg');
+  background-size: cover;
+}
+
+/*-----------------------------------------------------------*/
+/*--------------Seccion card Informativas--------------------*/
+.card {
+    margin-bottom: 20px;
+    background-color: transparent !important; }
+    .card .card-subtitle {
+      font-weight: 300;
+      margin-bottom: 10px;
+      color: #a1aab2; }
+    .card .card-title {
+      position: relative;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .card .card-actions {
+      float: right; }
+      .card .card-actions a {
+        padding: 0 5px;
+        cursor: pointer; }
+    .card .card-header .card-title {
+      margin-bottom: 0px; }
+  
+  .card-alt {
+    margin: 0 -20px;
+    background: #e4e9ef; }
+  
+  .card-group {
+    margin-bottom: 20px; }
+    .card-group .card {
+      border-right: 1px solid #e9ecef; }
+  
+  .card-fullscreen {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: auto; }
+  
+  .oh {
+    overflow: hidden; }
+
+.card-hover {
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition: all .25s ease; }
+    .card-hover:hover {
+      webkit-transform: translateY(-4px) scale(1.01);
+      -moz-transform: translateY(-4px) scale(1.01);
+      -ms-transform: translateY(-4px) scale(1.01);
+      -o-transform: translateY(-4px) scale(1.01);
+      -webkit-transform: translateY(-4px) scale(1.01);
+      transform: translateY(-4px) scale(1.01);
+      -webkit-box-shadow: 0 14px 24px rgba(62, 57, 107, 0.1);
+      box-shadow: 0 14px 24px rgba(62, 57, 107, 0.1); }
+  
+  .draggable-cards .card-header {
+    cursor: move; }
+  
+  .card-moved .card {
+    background: #2962FF;
+    color: #fff; }
+
+  .badge-mensajes{
+    position: absolute;
+    top: 40%;
+  }
+
+/*-----------------------------------------------------------*/
+/*--------------Seccion usuarios y comentarios---------------*/
+
+.avatar{
+  max-width: 2.25rem;
+}
+
+/*******************/
+/*Chat widget*/
+/*******************/
+.chat-box {
+  overflow: auto; }
+
+.chat-list {
+  margin: 0px;
+  padding: 0px; }
+  .chat-list .chat-item {
+    list-style: none;
+    margin-top: 30px; }
+    .chat-list .chat-item .chat-img {
+      display: inline-block;
+      width: 45px;
+      vertical-align: top; }
+      .chat-list .chat-item .chat-img img {
+        width: 45px;
+        border-radius: 100%; }
+    .chat-list .chat-item .chat-content {
+      width: calc(100% - 50px);
+      display: inline-block;
+      padding-left: 15px; }
+      .chat-list .chat-item .chat-content .box {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 3px;
+        color: #343a40;
+        background: #f8f9fa; }
+    .chat-list .chat-item .chat-time {
+      display: block;
+      font-size: 10px;
+      color: #4F5467;
+      margin: 5px 0 15px 65px; }
+    .chat-list .chat-item.odd .chat-content {
+      text-align: right;
+      width: calc(100% - 0px); }
+    .chat-list .chat-item.odd .chat-time {
+      text-align: right; }
+    .chat-list .chat-item.odd .box {
+      clear: both;
+      color: #fff;
+      background: #2962FF; }
+    .chat-list .chat-item.odd + .odd {
+      margin-top: 0px; }
+    .chat-list .chat-item.reverse {
+      text-align: right; }
+      .chat-list .chat-item.reverse .chat-time {
+        text-align: left; }
+      .chat-list .chat-item.reverse .chat-content {
+        padding-left: 0px;
+        padding-right: 15px; }
+
+/*******************/
+/*Chat widget*/
+/*******************/
+.chat-windows {
+  position: fixed;
+  bottom: 0px;
+  right: 300px;
+  height: 350px;
+  max-height: 350px;
+  z-index: 9999;
+  -webkit-transition: 600ms;
+  -o-transition: 600ms;
+  transition: 600ms; }
+  .chat-windows.show-chat {
+    bottom: 0px; }
+  .chat-windows.hide-chat {
+    bottom: -350px; }
+  .chat-windows .user-chat {
+    min-width: 300px;
+    min-height: 350px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+    float: right;
+    margin: 0 2px 0 0; }
+    .chat-windows .user-chat.mini-chat {
+      min-width: 40px;
+      min-height: 40px;
+      bottom: 0px;
+      top: 310px;
+      position: relative; }
+      .chat-windows .user-chat.mini-chat .chat-head .name,
+      .chat-windows .user-chat.mini-chat .chat-head i,
+      .chat-windows .user-chat.mini-chat .chat-footer,
+      .chat-windows .user-chat.mini-chat .chat-body {
+        display: none; }
+      .chat-windows .user-chat.mini-chat .chat-head img {
+        margin: 0; }
+      .chat-windows .user-chat.mini-chat .chat-head .status {
+        left: 28px;
+        top: 10px; }
+    .chat-windows .user-chat .chat-head {
+      height: 40px;
+      padding: 10px;
+      background-color: #2962FF;
+      color: #fff;
+      position: relative; }
+      .chat-windows .user-chat .chat-head img {
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+        margin: -4px 8px 0 0;
+        display: inline-block;
+        cursor: pointer; }
+      .chat-windows .user-chat .chat-head .status {
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        left: 28px;
+        top: 7px; }
+      .chat-windows .user-chat .chat-head .online {
+        background-color: #36bea6; }
+      .chat-windows .user-chat .chat-head .busy {
+        background-color: #f62d51; }
+      .chat-windows .user-chat .chat-head .away {
+        background-color: #fb8c00; }
+      .chat-windows .user-chat .chat-head .offline {
+        background-color: #ffbc34; }
+      .chat-windows .user-chat .chat-head i {
+        font-size: 14px;
+        float: right;
+        color: #fff;
+        margin: 3px 0 0 5px;
+        cursor: pointer; }
+    .chat-windows .user-chat .chat-footer {
+      padding: 0px;
+      border-top: 1px solid #e9ecef; }
+      .chat-windows .user-chat .chat-footer .form-control {
+        background-color: transparent;
+        color: #3e5569;
+        font-size: 14px;
+        border: 0px;
+        width: 100%;
+        height: 40px; }
+        .chat-windows .user-chat .chat-footer .form-control:focus, .chat-windows .user-chat .chat-footer .form-control:hover {
+          border: 0px; }
+    .chat-windows .user-chat .chat-body {
+      height: 270px;
+      padding: 15px 15px 0;
+      background-color: #eef5f9;
+      overflow: hidden;
+      max-width: 300px;
+      position: relative; }
+
+.chat-list {
+  margin: 0px;
+  padding: 0px; }
+  .chat-list .msg_receive, .chat-list .msg_sent {
+    list-style: none;
+    margin-top: 30px; }
+    .chat-list .msg_receive .chat-img, .chat-list .msg_sent .chat-img {
+      display: inline-block;
+      width: 45px;
+      vertical-align: top; }
+      .chat-list .msg_receive .chat-img img, .chat-list .msg_sent .chat-img img {
+        width: 100%;
+        border-radius: 100%; }
+    .chat-list .msg_receive .chat-content, .chat-list .msg_sent .chat-content {
+      width: calc(100% - 50px);
+      display: inline-block;
+      padding-left: 15px; }
+      .chat-list .msg_receive .chat-content .box, .chat-list .msg_sent .chat-content .box {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 3px;
+        background: #fff; }
+    .chat-list .msg_receive .chat-time, .chat-list .msg_sent .chat-time {
+      display: block;
+      font-size: 10px;
+      color: #a1aab2;
+      margin: 5px 0 15px 15px; }
+    .chat-list .msg_receive.odd .chat-content, .chat-list .msg_sent.odd .chat-content {
+      text-align: right;
+      width: calc(100% - 0px); }
+      .chat-list .msg_receive.odd .chat-content .box, .chat-list .msg_sent.odd .chat-content .box {
+        clear: both;
+        color: #fff;
+        background: #2962FF; }
+    .chat-list .msg_receive.odd .chat-time, .chat-list .msg_receive .reverse, .chat-list .msg_sent.odd .chat-time, .chat-list .msg_sent .reverse {
+      text-align: right; }
+    .chat-list .msg_receive.odd + .odd, .chat-list .msg_sent.odd + .odd {
+      margin-top: 0px; }
+    .chat-list .msg_receive.reverse .chat-content, .chat-list .msg_sent.reverse .chat-content {
+      padding-left: 0px;
+      padding-right: 15px; }
+    .chat-list .msg_receive.reverse .chat-time, .chat-list .msg_sent.reverse .chat-time {
+      text-align: left; }
+
+.mailbox .chat-scroll {
+  height: calc(100vh - 100px); }
+
+/*---------boton enviar chat-------------------*/
+
+.btn-circle.btn-lg, .btn-group-lg>.btn-circle.btn {
+  width: 50px;
+  height: 50px;
+  padding: 14px 15px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.btn-circle {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+/*------Efectos generales----------------*/
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0); }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0); }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0); }
+  to {
+    -webkit-transform: none;
+    transform: none; } }
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown; }
+
+
+  /*----------Productos Css-----------*/
+  /*******************
+User card page
+******************/
+.el-element-overlay .white-box {
+  padding: 0px; }
+
+.el-element-overlay .el-card-item {
+  position: relative;
+  padding-bottom: 20px; }
+  .el-element-overlay .el-card-item .el-card-avatar {
+    margin-bottom: 20px; }
+  .el-element-overlay .el-card-item .el-card-content {
+    text-align: center; }
+  .el-element-overlay .el-card-item .el-overlay-1 {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default; }
+    .el-element-overlay .el-card-item .el-overlay-1 img {
+      display: block;
+      position: relative;
+      -webkit-transition: all .4s linear;
+      -o-transition: all .4s linear;
+      transition: all .4s linear;
+      width: 100%;
+      height: auto; }
+    .el-element-overlay .el-card-item .el-overlay-1:hover img {
+      -ms-transform: scale(1.2) translateZ(0);
+      -webkit-transform: scale(1.2) translateZ(0);
+      /* transform: scale(1.2) translateZ(0); */ }
+    .el-element-overlay .el-card-item .el-overlay-1 .el-info {
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: transparent;
+      filter: alpha(opacity=0);
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      padding: 0;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%) translateZ(0);
+      -webkit-transform: translateY(-50%) translateZ(0);
+      -ms-transform: translateY(-50%) translateZ(0); }
+      .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item {
+        list-style: none;
+        display: inline-block;
+        margin: 0 3px; }
+        .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item .el-link {
+          border-color: #fff;
+          color: #fff;
+          padding: 12px 15px 10px; }
+          .el-element-overlay .el-card-item .el-overlay-1 .el-info .el-item .el-link:hover {
+            background: #2962FF;
+            border-color: #2962FF; }
+  .el-element-overlay .el-card-item .el-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .el-element-overlay .el-card-item .el-overlay-1:hover .el-overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0); }
+  .el-element-overlay .el-card-item .el-overlay-1 .scrl-dwn {
+    top: -100%; }
+  .el-element-overlay .el-card-item .el-overlay-1 .scrl-up {
+    top: 100%;
+    height: 0px; }
+  .el-element-overlay .el-card-item .el-overlay-1:hover .scrl-dwn {
+    top: 0px; }
+  .el-element-overlay .el-card-item .el-overlay-1:hover .scrl-up {
+    top: 0px;
+    height: 100%; }
+
+
+
+/*================================================
+Productos Area CSS
+=================================================*/
+.portfolio-area{
+  background-color: #a4bc32;
+}
+.shorting-menu {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shorting-menu .filter {
+  border: 1px solid #000000;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 15px;
+  margin: 0 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: 0;
+}
+
+.shorting-menu .filter i {
+  margin-right: 2px;
+}
+
+.shorting-menu .filter i::before {
+  font-size: 13px;
+}
+
+.shorting-menu .filter.active, .shorting-menu .filter:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.shorting-menu.white-color .filter {
+  background-color: #111111;
+  border-color: #111111;
+  color: #ffffff;
+}
+
+.shorting-menu.white-color .filter.active, .shorting-menu.white-color .filter:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.shorting .mix {
+  display: none;
+}
+
+.single-portfolio-box {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.single-portfolio-box img {
+  -webkit-transition: .9s;
+  transition: .9s;
+}
+
+.single-portfolio-box .popup-btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 2;
+}
+
+.single-portfolio-box .portfolio-content {
+  position: absolute;
+  left: 0;
+  background-color: #000000;
+  bottom: 20px;
+  padding: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.single-portfolio-box .portfolio-content h3 {
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.single-portfolio-box .portfolio-content h3 a {
+  color: #ffde29;
+}
+
+.single-portfolio-box .portfolio-content span {
+  display: block;
+  color: #ffffff;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.single-portfolio-box:hover img {
+  -webkit-transform: rotate(15deg) scale(1.4);
+          transform: rotate(15deg) scale(1.4);
+}
+
+.single-portfolio-box:hover .portfolio-content {
+  bottom: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+  @media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    margin-left: -180px;
+    width: 400px;
+  }
+}

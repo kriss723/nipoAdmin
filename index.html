@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+    <title>Nipo System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/35874a87c5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="d-flex" id="content-wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-container" class="bg-dark border-right panel.collapse collapse">
+          <div class="logo">
+            <h4 class="font-weight-bold mb-0">Nipo Admin</h4>
+          </div>
+          <div class="menu list-group-flush">
+              <a href="" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+                <i class="fas fa-shapes lead mr-2"></i>Escritorio</a>
+              <a href="html/usuarios.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+                <i class="fas fa-users lead mr-2"></i>Usuarios</a>
+              <a href="html/productos.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+                <i class="fas fa-icons lead mr-2"></i>Productos</a>
+              <a href="html/eventos.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+                <i class="far fa-calendar-alt lead mr-2"></i>Eventos</a> 
+              <a href="html/contacto.html" class="list-group-item list-group-item-action bg-dark p-3 border-0 text-white">
+                <i class="fas fa-satellite lead mr-2"></i>Contacto</a>     
+          </div>
+        </div>
+        
+        <!--El menu del navegador-->
+        <div id="page-container" class="w-100 bg-imagen1">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="#sidebar-container" data-toggle="collapse"><i class="fas fa-bars lead mr-2"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <form class="form-inline my-2 my-lg-0">
+              <div id="txtbusqueda" class="collapse">
+                <input  class="form-control mr-sm-2" type="search" placeholder="Escribe &amp; enter" aria-label="Search">
+              </div>
+              
+              <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="collapse" data-target="#txtbusqueda" role="button">Buscar</button>
+            </form>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+
+                
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"><h4 class="font-weight-bold mb-0">Nipo Admin</h4><span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/users/user4.jpg" alt="user" class="rounded-circle" width="31">
+                    <span> Christian</span>
+                  </a>
+                  
+                  <div class="dropdown-menu dropdown-menu-right user-dd animated" id="menuUsuario" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Perfil</a>
+                    <a class="dropdown-item" href="#">Eventos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item badge-danger badge-pill d-flex" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sms lead mr-2"></i>Mensajes <div class="ml-auto"><span class="badge badge-primary badge-pill">4</span></div></a>
+
+                    <div class="dropdown-menu dropdown-menu-left mailbox" aria-labelledby="2">
+                      <ul class="list-style-none p-2" style="list-style: none;">
+                          <li>
+                              <div class="">
+                                   <!-- Message -->
+                                  <a href="javascript:void(0)" class="link border-top">
+                                      <div class="d-flex no-block align-items-center p-10">
+                                          <span class="btn btn-success btn-circle pl-2 pt-2"><i class="far fa-calendar-alt" style="font-size: 1.5rem;"></i></span>
+                                          <div class="m-l-10 pl-2">
+                                              <h5 class="m-b-0">Eventos hoy</h5> 
+                                              <span class="mail-desc">El sistema no registra eventos programados</span> 
+                                          </div>
+                                      </div>
+                                  </a>
+                                  <div class="dropdown-divider"></div>
+                                  <!-- Message -->
+                                  <a href="javascript:void(0)" class="link border-top">
+                                      <div class="d-flex no-block align-items-center p-10">
+                                          <span class="btn btn-info btn-circle pl-2 pt-2"><i class="fas fa-parachute-box" style="font-size: 1.5rem;"></i></span>
+                                          <div class="m-l-10 pl-2">
+                                              <h5 class="m-b-0">Pedidos</h5> 
+                                              <span class="mail-desc">Se acerca un pedido 3 días</span> 
+                                          </div>
+                                      </div>
+                                  </a>
+                                  <div class="dropdown-divider"></div>
+                                  <!-- Message -->
+                                  <a href="javascript:void(0)" class="link border-top">
+                                      <div class="d-flex no-block align-items-center p-10">
+                                          <span class="btn btn-warning btn-circle pl-2 pt-2"><i class="fas fa-chart-area" style="font-size: 1.5rem;"></i></span>
+                                          <div class="m-l-10 pl-2">
+                                              <h5 class="m-b-0">Invetario</h5> 
+                                              <span class="mail-desc">Productos con pocas unidades</span> 
+                                          </div>
+                                      </div>
+                                  </a>
+                                  <div class="dropdown-divider"></div>
+                                  <!-- Message -->
+                                  <a href="javascript:void(0)" class="link border-top">
+                                      <div class="d-flex no-block align-items-center p-10">
+                                          <span class="btn btn-danger btn-circle pl-2 pt-2"><i class="fa fa-link"></i></span>
+                                          <div class="m-l-10 pl-2">
+                                              <h5 class="m-b-0">Admin NIPO</h5> 
+                                              <span class="mail-desc">Enlace Roto Seccion 1</span> 
+                                          </div>
+                                      </div>
+                                  </a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              
+                    <a class="dropdown-item" href="html/login.html"><i class="fas fa-sign-out-alt lead mr-2"></i>Salir</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!--Mensajes-->
+
+          <!--Contenido de la pagina-->
+          <div id="content" class="container-fluid p-5 ">
+
+            <!-- ============================================================== -->
+                <!-- Cards  -->
+                <!-- ============================================================== -->
+                <div class="row">
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                      <a href="#sidebar-container" data-toggle="collapse">
+                      <div class="card card-hover">
+                          <div class="box bg-cyan text-center">
+                              <h1 class="font-dark text-white"><i class="fas fa-shapes lead mr-2"></i></h1>
+                              <h5 class="text-white">Menu</h5>
+                              <h6></h6>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-4 col-xlg-3">
+                    <div class="card mb-5 shadow-sm border-0 card-hover">
+                      <div class="card-body bg-primary d-flex">
+                        <div>
+                          <div class="align-self-center d-flex mr-3">
+                            <i class="fas fa-piggy-bank text-white align-self-center mx-auto lead"></i>
+                          </div>
+                        </div>
+                        <div class="align-self-center">
+                          <h5 class="mb-0 text-white">4345</h5>
+                          <small class="text-white">Ventas exitosas</small>
+                        </div>
+                        <div class="circle rounded-circle bg-white align-self-center d-flex ml-auto" style="width: 32px; height: 32px;">
+                          <i class="fas fa-chart-line text-success align-self-center mx-auto lead"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                   <!-- Column -->
+                   <div class="col-md-6 col-lg-4 col-xlg-3">
+                    <div class="card mb-5 shadow-sm border-0 card-hover">
+                      <div class="card-body bg-warning d-flex">
+                        <div>
+                          <div class="align-self-center d-flex mr-3">
+                            <i class="fas fa-laptop text-muted align-self-center mx-auto lead"></i>
+                          </div>
+                        </div>
+                        <div class="align-self-center">
+                          <h5 class="mb-0 text-success">15.356</h5>
+                          <small class="text-muted">Visitantes online</small>
+                        </div>
+                        <div class="circle rounded-circle bg-white align-self-center d-flex ml-auto" style="width: 32px; height: 32px;">
+                          <i class="fas fa-chart-area text-success align-self-center mx-auto lead"></i>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="html/productos.html">
+                      <div class="card card-hover">
+                          <div class="box bg-info text-center">
+                              <h1 class="font-light text-white"><i class="fas fa-icons lead mr-2"></i></h1>
+                              <h5 class="text-white">Productos</h5>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-4 col-xlg-3">
+                    <div class="card mb-5 shadow-sm border-0 card-hover">
+                      <div class="card-body bg-danger d-flex">
+                        <div>
+                          <div class="align-self-center d-flex mr-3">
+                            <i>
+                              <svg aria-hidden="true" focusable="false" style="width: 25px; height: 25px; color:darkorange" data-prefix="fas" data-icon="engine-warning" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-engine-warning fa-w-20 fa-spin fa-lg"><path fill="currentColor" d="M48 256c0-59.53 19.55-117.38 55.36-164.51 5.18-6.81 4.48-16.31-2.03-21.86l-12.2-10.41c-6.91-5.9-17.62-5.06-23.15 2.15C23.32 117.02 0 185.5 0 256c0 70.47 23.32 138.96 65.96 194.62 5.53 7.21 16.23 8.05 23.15 2.16l12.19-10.4c6.51-5.55 7.21-15.04 2.04-21.86C67.55 373.37 48 315.53 48 256zM320 32C196.3 32 96 132.3 96 256c0 123.76 100.3 224 224 224s224-100.24 224-224c0-123.7-100.3-224-224-224zm0 352c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm25.44-110.41c-.82 8.18-7.7 14.41-15.92 14.41h-19.04c-8.22 0-15.1-6.23-15.92-14.41l-12.8-128c-.94-9.42 6.45-17.59 15.92-17.59h44.64c9.47 0 16.86 8.17 15.92 17.59l-12.8 128zM572.73 59.71c-5.58-7.18-16.29-7.95-23.17-2l-12.15 10.51c-6.47 5.6-7.1 15.09-1.88 21.87C572.04 137.47 592 195.81 592 256c0 60.23-19.96 118.57-56.46 165.95-5.22 6.78-4.59 16.27 1.88 21.87l12.15 10.5c6.87 5.95 17.59 5.18 23.17-2C616.21 396.38 640 327.31 640 256c0-71.27-23.79-140.34-67.27-196.29z" class=""></path></svg>
+                            </i>
+                          </div>
+                        </div>
+                        <div class="align-self-center">
+                          <h5 class="mb-0 text-white">SHIMANO G02s</h5>
+                          <small class="text-white">Alerta Productos</small>
+                        </div>
+                        <div class= "align-self-center d-flex ml-auto">
+                          <span class="badge badge-warning badge-pill">7</span>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                      <div class="card card-hover">
+                          <div class="box bg-info text-center">
+                            <h1 class="font-light text-white"><i> 
+                              <svg aria-hidden="true" focusable="false" style="width: 25px; height: 25px;" data-prefix="far" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-envelope fa-w-16 fa-spin fa-lg"><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z" class=""></path></svg>
+                          </i></h1>
+                          <h5 class="text-white">Mensajes</h5>
+                          <span class="badge badge-danger badge-pill badge-mensajes">4</span>
+                          </div>
+                      </div>
+                  </div>
+                   <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="html/eventos.html">
+                      <div class="card card-hover">
+                          <div class="box bg-cyan text-center">
+                              <h1 class="font-light text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                                  <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                </svg>
+                              </h1>
+                              <h5 class="text-white">Eventos</h5>
+                              <span class="badge badge-danger badge-pill badge-mensajes">2</span>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                    <a href="html/usuarios.html">
+                      <div class="card card-hover">
+                          <div class="box bg-success text-center">
+                              <h1 class="font-light text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                                </svg>
+                              </h1>
+                              <h6 class="text-white">Usuarios</h6>
+                          </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Column -->
+                  <div class="col-md-6 col-lg-2 col-xlg-3">
+                      <div class="card card-hover">
+                          <div class="box bg-dark text-center">
+                              <h1 class="font-light text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-window-sidebar" viewBox="0 0 16 16">
+                                  <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                                  <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
+                                </svg>
+                              </h1>
+                              <h6 class="text-white">Sitio WEB</h6>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Column -->
+                </div>
+
+
+                <!-- Seccion usuarios y chat-->
+                <div class="row mb-3">
+                  <!-- Tabla usuarios -->
+                  <div class="col-xl-7 col-lg-12">
+                    <div class="card" >
+                      <div class="card-body bg-primary">
+                        <h4 class="card-title text-white">Usuarios Resumen</h4>
+                      </div>
+
+                      <div class="table-responsive">
+                        <table class="table bg-light">
+                          <thead>
+                            <tr>
+                              <th colspan="2"><small class="font-weight-bold">Usuarios<small></th>
+                              <th scope="col"><small class="font-weight-bold">Estatus<small></th>
+                              <th scope="col"><small class="font-weight-bold">Cargo<small></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="shadow-sm">
+                              <td><img src="img/users/user1.jpg" class="img-fluid rounded-circle avatar"
+                                  alt="usuario1" /></td>
+                              <td><span class="d-block">Antonio Rios</span><small class="text-muted">tonogalan@bikeshop.com</small>
+                              </td>
+                              <td class="align-middle"><span class="badge badge-success text-white">Activo</span></td>
+                              <td class="align-middle"><span class="badge badge-secondary">Asesor <i
+                                    class="fas fa-cog ml-2"></i></span></td>
+                            </tr>
+                            <tr class="shadow-sm">
+                              <td><img src="img/users/user2.jpg" class="img-fluid rounded-circle avatar"
+                                  alt="usuario2" /></td>
+                              <td><span class="d-block">Jaime Gonzalez</span><small class="text-muted">yeimy@bikeshop.com</small></td>
+                              <td class="align-middle"><span class="badge badge-success text-white">Activo</span></td>
+                              <td class="align-middle"><span class="badge badge-secondary">Técnico<i
+                                    class="fas fa-cog ml-2"></i></span></td>
+                            </tr>
+                            <tr class="shadow-sm">
+                              <td><img src="img/users/user3.jpg" class="img-fluid rounded-circle avatar"
+                                  alt="usuario3" /></td>
+                              <td><span class="d-block">Brayan wollf</span><small class="text-muted">elbrayan@bikeshop.com</small></td>
+                              <td class="align-middle"><span class="badge badge-success text-white">Activo</span></td>
+                              <td class="align-middle"><span class="badge badge-secondary">Técnico<i
+                                    class="fas fa-cog ml-2"></i></span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!--Fin seccion table usuarios-->
+                    <!--seccion Ordenes de trabajo-->
+                      <div class="card">
+                        <div class="card-body bg-primary">
+                          <h4 class="card-title text-white">Ordenes de trabajo Resumen</h4>
+                        </div>
+  
+                        <div class="table-responsive">
+                          <table class="table bg-light">
+                            <thead>
+                              <tr>
+                                <th colspan="1"><small class="font-weight-bold">N. orden<small></th>
+                                <th scope="col"><small class="font-weight-bold">Nombre Cliente<small></th>
+                                <th scope="col"><small class="font-weight-bold">Estatus<small></th>
+                                <th scope="col"><small class="font-weight-bold">Ajustes<small></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="shadow-sm">
+                                <td>
+                                  <svg aria-hidden="true" focusable="false" style="width: 25px;" data-prefix="fas" data-icon="tools" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tools fa-w-16 fa-spin fa-lg"><path fill="currentColor" d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z" class=""></path></svg>
+                                1451</td>
+                                <td><span class="d-block">Laura Zapata</span><small class="text-muted">3103124578</small>
+                                </td>
+                                <td class="align-middle"><span class="badge badge-danger text-white">Pendiente</span></td>
+                                <td class="align-middle"><span class="badge badge-secondary">Configurar <i
+                                      class="fas fa-cog ml-2"></i></span></td>
+                              </tr>
+                              <tr class="shadow-sm">
+                                <td>
+                                  <svg aria-hidden="true" focusable="false" style="width: 25px;" data-prefix="fas" data-icon="tools" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tools fa-w-16 fa-spin fa-lg"><path fill="currentColor" d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z" class=""></path></svg>
+                                1452</td>
+                                <td><span class="d-block">Andrea Lopez</span><small class="text-muted">3004587896</small></td>
+                                <td class="align-middle"><span class="badge badge-danger text-white">Pendiente</span></td>
+                                <td class="align-middle"><span class="badge badge-secondary">Configurar<i
+                                      class="fas fa-cog ml-2"></i></span></td>
+                              </tr>
+                              <tr class="shadow-sm">
+                                <td>
+                                  <svg aria-hidden="true" focusable="false" style="width: 25px;" data-prefix="fas" data-icon="tools" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-tools fa-w-16 fa-spin fa-lg"><path fill="currentColor" d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z" class=""></path></svg>
+                                1453</td>
+                                <td><span class="d-block">Brayan wollf</span><small class="text-muted">elbrayan@bikeshop.com</small></td>
+                                <td class="align-middle"><span class="badge badge-success text-white">OK</span></td>
+                                <td class="align-middle"><span class="badge badge-secondary">Configurar<i
+                                      class="fas fa-cog ml-2"></i></span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      <!--Fin card table ordenes de servicio-->
+                    </div>
+
+                    <!--Fin card table usuarios-->
+                  </div>
+
+
+                    <!--Inicio seccion chat-->
+                  <div class="col-xl-5 col-lg-12">
+                      <!-- Card -->
+                      <div class="card">
+                        <div class="card-body bg-light">
+                            <h4 class="card-title">Nipo chat</h4>
+                            <div class="chat-box scrollable" style="height:550px;">
+                                <!--chat Row -->
+                                <ul class="chat-list">
+                                    <!--chat Row -->
+                                    <li class="chat-item">
+                                        <div class="chat-img"><img src="img/users/user3.jpg" alt="user"></div>
+                                        <div class="chat-content">
+                                            <h6 class="font-medium">Brayan wollf</h6>
+                                            <div class="box bg-light-info">la orden del servicio tiene un error en el consecutivo, no encuentro el repuesto ya se facturo la orden 1452</div>
+                                        </div>
+                                        <div class="chat-time">10:56 am</div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <li class="chat-item">
+                                        <div class="chat-img"><img src="img/users/user1.jpg" alt="user"></div>
+                                        <div class="chat-content">
+                                            <h6 class="font-medium">Antonio Rios</h6>
+                                            <div class="box bg-light-info">huyyy no brayan ya voy para allá.</div>
+                                        </div>
+                                        <div class="chat-time">10:57 am</div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <li class="odd chat-item">
+                                        <div class="chat-content">
+                                            <div class="box bg-light-inverse">No se preocupen muchachos.</div>
+                                            <br>
+                                        </div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <li class="odd chat-item">
+                                        <div class="chat-content">
+                                            <div class="box bg-light-inverse">Revisen en el sistema.</div>
+                                            <br>
+                                        </div>
+                                        <div class="chat-time">10:59 am</div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <li class="chat-item">
+                                        <div class="chat-img"><img src="img/users/user2.jpg" alt="user"></div>
+                                        <div class="chat-content">
+                                            <h6 class="font-medium">Jaime Gonzalez</h6>
+                                            <div class="box bg-light-info">Brayan el repuesto si esta en el sistema, busque en la parte de atras de la bodega. debe estar tapado</div>
+                                        </div>
+                                        <div class="chat-time">11:00 am</div>
+                                    </li>
+                                    <!--chat Row -->
+                                    <!--chat Row -->
+                                    <li class="chat-item">
+                                      <div class="chat-img"><img src="img/users/user3.jpg" alt="user"></div>
+                                      <div class="chat-content">
+                                          <h6 class="font-medium">Brayan wollf</h6>
+                                          <div class="box bg-light-info">Si estaba tapado con un repuesto gracias, por laterde queda lista esa bicicleta</div>
+                                      </div>
+                                      <div class="chat-time">11:59 am</div>
+                                  </li>
+                                  <!--chat Row -->
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body border-top bg-cyan">
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="input-field m-t-0 m-b-0">
+                                        <textarea id="textarea1" placeholder="Escribe al grupo" class="form-control border-0"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <a class="btn-circle btn-lg btn-primary float-right text-white" href="javascript:void(0)"><i class="fas fa-paper-plane"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                  </div>
+                    <!--Fin de seccion chat-->
+                    
+                    
+                  <!-- Fin tabla usarios y chat-->
+                </div>
+
+                <!--inicio de estadisticas-->
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="card bg-primary">
+                          <div class="card-body bg-light">
+                              <h5 class="card-title">Visitantes del sitio</h5>
+                               <div id="real-time" style="height:400px;"></div>
+                              <p>Tiempo:
+                                  <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milisegundos
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Fin de estadisticas-->
+
+              <!-- Seccion de tareas y barras de progreso-->
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="card">
+                      <div class="card-body bg-dark">
+                          <h5 class="card-title m-b-0 text-white">Tareas</h5>
+                      </div>
+                      <table class="table bg-light">
+                          <thead>
+                              <tr>
+                                  <th scope="col">Descripción</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Acciones</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Realizar pedido de repuestos</td>
+                                  <td class="text-success">Realizado</td>
+                                  <td>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+                                      </svg>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                      </svg>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg>
+                                    </a>   
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Organizar bodega</td>
+                                  <td class="text-warning">Pendiente</td>
+                                  <td>
+                                      <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                          <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+                                        </svg>
+                                      </a>
+                                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                          <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                        </svg>
+                                      </a>
+                                      <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                        </svg>
+                                      </a>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Reparación del extractor</td>
+                                  <td class="text-danger">Cancelado</td>
+                                  <td>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Update" style="color: green;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+                                      </svg>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: goldenrod;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                                      </svg>
+                                    </a>
+                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Delete" style="color: red;">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg>
+                                    </a>
+                                  </td>  
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+                <!--Inicio de la seccion de progreso-->
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body bg-dark text-white">
+                        <h4 class="card-title">Progreso de la Empresa</h4>
+                        <div class="m-t-20">
+                            <div class="d-flex no-block align-items-center">
+                                <span>81% Atención rapida</span>
+                                <div class="ml-auto">
+                                    <span>15 minutos</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 81%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="m-t-25">
+                            <div class="d-flex no-block align-items-center m-t-15">
+                                <span>72% Ventas físicas</span>
+                                <div class="ml-auto">
+                                    <span>120</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="m-t-25">
+                          <div class="d-flex no-block align-items-center m-t-15">
+                              <span>65% Ventas Online</span>
+                              <div class="ml-auto">
+                                  <span>65</span>
+                              </div>
+                          </div>
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                      </div>
+                        <div class="m-t-25">
+                            <div class="d-flex no-block align-items-center m-t-15">
+                                <span>53% Fidelización</span>
+                                <div class="ml-auto">
+                                    <span>600</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-warning  progress-bar-animated" role="progressbar" style="width: 53%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="m-t-25">
+                            <div class="d-flex no-block align-items-center m-t-15">
+                                <span>15% Respuesta Reparaciones</span>
+                                <div class="ml-auto">
+                                    <span>4 horas</span>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" style="width: 15%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            
+                </div>
+                  
+              </div>
+              <!--Fin de la seccion tareas y progreso-->
+          <!--Fin pagina contenido-->
+        </div> 
+
+    </div>
+     
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart-page-init.js"></script>
+
+    
+
+</body>
+</html>
