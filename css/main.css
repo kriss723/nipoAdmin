@@ -602,7 +602,7 @@ Productos Area CSS
   }
 }
 
-  @media (max-width: 576px){
+  @media (max-width: 768px){
     #sidebar-container .menu {
     width: 3rem;
     }
