@@ -61,6 +61,13 @@
   background-size: cover;
 }
 
+/*------------------------------------------------------------*/
+/*--------------Seccion menu----------------------------------*/
+
+.mostrar{
+  display: none;
+}
+
 /*-----------------------------------------------------------*/
 /*--------------Seccion card Informativas--------------------*/
 .card {
@@ -594,3 +601,18 @@ Productos Area CSS
     width: 400px;
   }
 }
+
+  @media (max-width: 576px){
+    #sidebar-container .menu {
+    width: 3rem;
+    }
+
+    .esconder{
+      display: none;
+    }
+
+    .mostrar{
+      display: block;
+      font-size: 1rem;
+    }
+  }
